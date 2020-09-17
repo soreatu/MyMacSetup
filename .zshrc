@@ -127,9 +127,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 
-# compile
-export LC_CTYPE=C
-export LANG=C
 
 # Nullpointer error
 export CGO_CPPFLAGS="-Wno-error -Wno-nullability-completeness -Wno-expansion-to-defined"
@@ -142,3 +139,4 @@ alias blog_push="rsync -azrv -e 'ssh -p 20007' --progress  ~/Sites/blog/public/ 
 
 # virtual machine
 alias ubuntu='~/GitHub/MyMacSetup/vbox_ubuntu.sh'
+alias vm='~/GitHub/MyMacSetup/vm.sh'
