@@ -35,7 +35,7 @@ function vmrun_ssh
 	VM="$@"
 	echo -n "ip: "
 	vmrun_ip $VM
-	ssh root@$("$VMRUN" -T fusion getGuestIPAddress "$VM" -wait)
+	ssh soreatu@$("$VMRUN" -T fusion getGuestIPAddress "$VM" -wait)
 }
 
 function vmrun_suspend

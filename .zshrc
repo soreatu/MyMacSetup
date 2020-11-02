@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# SageMath
 alias sage8jupyter="cd ~/Documents/SageMath\ Workspace && sage8 -n jupyter"
 alias sage9jupyter="cd ~/Documents/SageMath\ Workspace && sage9 -n jupyter"
 alias sage="sage9"
@@ -114,8 +115,8 @@ export LANG=en_US.UTF-8
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Proxy
-alias goproxy='export http_proxy=http://127.0.0.1:8233 https_proxy=http://127.0.0.1:8233'
-alias disproxy='unset http_proxy https_proxy'
+alias onproxy='export http_proxy=http://127.0.0.1:8233 https_proxy=http://127.0.0.1:8233'
+alias offproxy='unset http_proxy https_proxy'
 
 
 # OpenSSL
@@ -135,8 +136,17 @@ export CGO_CPPFLAGS="-Wno-error -Wno-nullability-completeness -Wno-expansion-to-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # blog push
-alias blog_push="rsync -azrv -e 'ssh -p 20007' --progress  ~/Sites/blog/public/ root@shanghai:/var/www/html/"
+#alias blog_push="rsync -azrv -e 'ssh -p 20010' --exclude .DS_Store --progress  ~/Sites/blog/public/ root@shanghai:/var/www/html/"
+alias blog_push="rsync -azrv --exclude .DS_Store --progress ~/Sites/blog/public/ ubuntu@81.69.1.18:/var/www/html/"
 
 # virtual machine
 alias ubuntu='~/GitHub/MyMacSetup/vbox_ubuntu.sh'
 alias vm='~/GitHub/MyMacSetup/vm.sh'
+
+
+# Setting PATH for Python 3.8
+# The original version is saved in .zprofile.pysave
+export PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/3.8/bin"
+
+# Metasploit
+export PATH="$PATH:/opt/metasploit-framework/bin"
